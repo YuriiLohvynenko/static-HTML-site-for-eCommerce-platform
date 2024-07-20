@@ -1,0 +1,797 @@
+.account-sidebar{
+	background: #fff;
+    border-radius: 15px;
+    position: relative;
+    z-index: 9;
+	box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.1);
+	@include transitionMedium;
+	
+	@include respond('tab-land') {
+		position: fixed;
+		z-index: 999999;
+		top: 0;
+		margin: 0;
+		left: 0;
+		border-radius: 0;
+		height: 100vh !important;
+		overflow: scroll;
+		width: 280px;
+		
+		&:not(.show){
+			left: -300px;
+		}
+	}
+	.profile-head{
+		padding: 25px;
+		border-radius: 10px;
+		text-align: center;
+			
+		.user-thumb{
+			width: 90px;
+			height: auto;
+			position: relative;
+			padding: 5px;
+			border: 1px solid var(--border-color);
+			border-radius: 50%;
+			margin: 0 auto 10px;
+
+			.badge{
+				position: absolute;
+				top: 0;
+				right: -15px;
+			}
+		}
+	}
+	.account-nav{
+		.nav-title{
+			padding: 10px 20px;
+			margin-bottom: 10px;
+		}
+		ul{
+			padding-bottom: 10px;
+			
+			li a{
+				padding: 8px 20px;
+				display: block;
+			}
+		}
+	}
+}
+
+.account-card{
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	padding: 30px;
+	border-radius: 12px;
+    min-height: 250px;
+	
+	@include respond('phone') {
+		padding: 20px;
+	}	
+}
+
+.account-wrapper{
+	padding-left: 35px;
+	
+	@include respond('tab-land') {
+		padding-left: 15px;
+	}
+}
+
+.toggle-info{
+	display: none;
+	padding: 18px 30px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    justify-content: space-between;
+	align-items: center;
+	
+	@include respond('tab-land') {
+		display: flex;
+	}
+	@include respond('phone') {
+		padding: 12px 15px;
+	}
+}
+
+.toggle-btn{
+	background-color: $primary;
+	padding: 10px 15px;
+	border-radius: 6px;
+	color: #fff !important;
+	
+	&:hover,
+	&:focus,
+	&:active{
+		color: #fff !important;
+	}
+	@include respond ('tab-port'){
+		@include transitionSlow;
+		
+		&:after{
+			content: "";
+			height: 100vh;
+			width: 0;
+			position: fixed;
+			left: -20%;
+			top: 0;
+			background-color: #000;
+			opacity: 0.7;
+			z-index: 99999;
+			transform: unset;
+			@include transitionSlow;
+		}
+		&.active{
+			&:after{
+				width: 100vw;
+				left: 0;
+			}
+		}
+	}
+}
+
+.table-style-1{
+	tr{
+		th{
+			color: #000;
+			font-size: 14px;
+			text-transform: uppercase;
+			padding: 15px 12px;
+			
+			&:last-child{
+				text-align: end;
+			}
+		}
+	}
+	tbody{
+		tr{
+			td{
+				font-size: 14px;
+				padding: 15px 12px;
+				
+				&:last-child{
+					text-align: end;
+				}
+			}
+		}
+	}
+	
+	.table{
+	    min-width: 600px;
+	}
+}
+
+.profile-edit{
+	padding: 25px;
+    margin: -30px -30px 0;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 35px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	display: flex;
+	align-items: center;
+	
+	.thumb{
+		border: 1px solid rgba(0, 0, 0, 0.1);
+		padding: 5px;
+		border-radius: 50%;
+		margin-right: 15px;
+		
+		img{
+			border-radius: 50%;
+		}
+	}
+	@include respond('phone') {
+	    padding: 20px;
+		margin: -20px -20px 25px;
+	}
+}
+
+.review-card{
+    background: #fff;
+    padding: 20px;
+    border: 1px solid;
+    border-radius: 8px;
+	
+	.review-media{
+		display: block;
+		margin: 0 15px 0 0;
+		width: 75px;
+	
+		img{
+			border-radius: 50%;
+		}
+	}
+	.review-head{
+		display: flex;
+		align-items: center;
+		margin-bottom: 15px;
+	}
+	.star-rating i{
+		font-size: 14px;
+	}
+	p:last-child{
+		margin-bottom: 0;
+	}
+	@include respond('phone') {
+		.review-media{
+			width: 60px;
+		}
+	}
+}
+
+.address-card{
+	.account-address-box{
+		border: 1px solid #000;
+		border-radius: 8px 8px 0px 0px;
+		padding: 15px;
+	}
+	.account-address-bottom{		
+		display: flex;
+		border: 1px solid #000;
+		border-top: 0;
+		padding: 12px 15px;
+		border-radius: 0px 0px 8px 8px;
+		background-color: #fff;
+
+		a i{
+			font-size: 14px;
+		}
+	}
+}
+
+.account-card-add{
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px dashed rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    padding: 35px;
+	
+	.account-address-add{
+		width: 95px;
+		height: 95px;
+		border-radius: 50%;
+		background-color: var(--primary);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 15px;
+		
+		svg{
+			fill: #fff;
+		}
+	}
+}
+
+.custom-control{
+	&.style-1 {
+		position: relative;
+		z-index: 1;
+		margin-bottom: 15px;
+		
+		.price{
+			margin-left: auto;
+			margin-right: 10px;
+			font-size: 14px;
+			font-weight: 500;
+		}
+		.custom-checkbox {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			border: 1px solid #c8c8c8;
+			padding: 20px 40px 19px 20px;
+			border-radius: 6px;
+			transition: 0.4s;
+			min-height: 90px;
+			height: 90px;
+			
+			.title{
+				font-size: 16px;
+				color: var(--title);
+				font-weight: 500;
+				display: block;
+			}
+			.text{
+				font-size: 14px;
+				color: #686868;
+				font-weight: 400;
+				display: block;
+			}
+			&.payment{
+				min-height: 65px;
+				height: 65px;
+			}
+		}
+		.form-check-input {
+			width: 26px;
+			height: 26px;
+			position: absolute;
+			top: 50%;
+			right: 15px;
+			transform: translate(0px, -50%);
+			margin: 0;
+			transition: 0.4s;
+			
+			&:checked{
+				& + label {
+					border: 1px solid #2856F9;
+					background: #EBEDF5;
+					.price {
+						color: #2856F9;
+					}
+				}
+			}
+			&:checked[type="radio"] {
+				--bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%232856F9'/%3e%3c/svg%3e");
+				background-color: #fff;
+				border: 1px solid #2856F9;
+			}
+		}
+		
+		&.style-thumb .custom-checkbox{
+			@include respond('phone') {
+				display: block;
+				height: auto;
+				
+				.thumb{
+					margin-bottom: 12px;
+				}
+			}
+		}
+	}
+}
+
+.order-cancel-card{
+	.order-cancel-box{
+		display: flex;
+		align-items: center;
+		padding: 20px;
+		border: 1px dashed rgba(0, 0, 0, 0.2);
+		border-radius: 8px;
+
+		.cancel-media{
+			width: 90px;
+		}
+		
+		.order-cancel-content{
+			margin-left: 20px;
+		}
+	}
+	.order-head{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 10px;
+	}
+}
+
+.order-details{
+	.order-head{
+		display: flex;
+		align-items: center;
+		border-bottom: 1px dashed rgba(0, 0, 0, 0.3);
+		padding-bottom: 20px;
+		margin-bottom: 30px;
+		
+		.head-thumb{
+			width: 80px;
+			height: auto;
+			border: 1px solid var(--border-color);
+			padding: 10px;
+			border-radius: 8px;
+		}	
+	}
+	.shiping-tracker-detail{
+		margin-bottom: 15px;
+		
+		.title{
+			font-weight: 500;
+			font-size: 15px;
+		}
+	}
+}
+
+.dz-tabs{
+	&.style-3{
+		.nav-tabs{
+			margin-bottom: 30px;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+			
+			.nav-link{
+				display: inline-block;
+				padding: 12px 0;
+				border: 0;
+				font-size: 16px;
+				font-weight:400;
+				margin: 0;
+				margin-right: 15px;
+				@include transitionMedium;
+				position: relative;
+				background-color: transparent;
+				width: auto !important;
+				
+				&:after{
+					content: "";
+					background-color: var(--primary);
+					width: 0;
+					height: 3px;
+					position: absolute;
+					bottom: -2px;
+					left: 50%;
+					@include transitionFast;
+					transform: translateX(-50%);
+				}
+				
+				&.active,
+				&:hover{
+					color:var(--primary);
+					&:after{
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+
+.widget-timeline{
+	.timeline{
+		list-style: none;
+		position: relative;
+		
+		&:before {
+			top: 1.25rem;
+			bottom: 3rem;
+			position: absolute;
+			content: " ";
+			width: 0.1275rem;
+			left: 10px;
+			border-right: 2px dashed rgba(0, 0, 0, 0.15);
+		}
+		> li {
+			margin-bottom: 0.9375rem;
+			position: relative;
+			&:before {
+				content: " ";
+				display: table;
+			}
+			&:after {
+				content: " ";
+				display: table;
+				clear: both;
+			}
+			> {
+				.timeline-box{
+					padding: 10px 10px 10px 15px;
+					position: relative;
+					display:block;
+					margin-left: 2.5rem;
+					span{
+						font-size: 0.75rem;
+						display: block;
+						margin-bottom: 0.3125rem;
+						letter-spacing: 0.0625rem;
+					}
+					p{
+						font-size:0.875rem;
+						margin-bottom: 0;
+						color: #000;
+					}
+				}
+				.timeline-badge {
+					border-radius: 50%;
+					height: 1.375rem;
+					left: 0;
+					position: absolute;
+					top: 0.625rem;
+					width: 1.375rem;
+					border-width: 0.125rem;
+					border-style: solid;
+					padding:0.25rem;
+					background-color: #fff;
+					border-color: #cfcfcf;
+					
+					&:after{
+						content:"";
+						width:0.625rem;
+						height:0.625rem;
+						border-radius:100%;
+						display:block;
+						background: #cfcfcf;
+					}
+					&.primary{
+						border-color: $primary;
+						
+						&:after{
+							background: $primary;
+						}
+					}
+					&.success{
+						border-color: $success;
+						
+						&:after{
+							background: $success;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.tracking-item-content{
+	display: flex;
+	justify-content: space-between;
+}
+
+.tracking-item{
+	display: flex;
+	align-items: center;
+	margin-bottom: 25px;
+	
+	.tracking-product{
+		width: 85px;
+		height: auto;
+		border: 1.5px solid var(--border-color);
+		padding: 10px;
+		border-radius: 8px;
+		margin-right: 20px;
+	}
+}
+
+.tracking-product-content{
+	.title,
+	p{
+		margin-bottom: 0;
+	}
+	strong{
+		color: #000;
+	}
+}
+
+.tracking-receiver{
+	li{
+		margin-bottom: 5px;
+		font-size: 14px;
+	}
+	strong{
+		color: #000;
+	}
+}
+
+.confirmation-card{
+	padding: 50px;
+	
+	.thumb{
+		max-width: 420px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	@include respond('phone'){
+		padding: 30px;		
+	}
+}
+
+.confirmed-request{
+	padding: 50px;
+	
+	.cancel-btn{
+		width: 100px;
+		height: 100px;
+		background: #46b95a;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		
+		i{
+			color: #fff;
+			font-size: 60px;
+		}
+	}
+	@include respond('phone'){
+		padding: 30px;
+		
+		.cancel-btn{
+			width: 80px;
+			height: 80px;
+			
+			i{
+				font-size: 35px;
+			}
+		}
+	}
+}
+
+// NEW-CODE
+.total-contain{
+	background-color: #fff;
+    padding: 20px 25px;
+    box-shadow: 0px 36px 48px rgba(31, 66, 135, 0.04);
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+	@include transitionMedium;
+	
+	@include respond("phone-land"){
+		display: flex;
+		justify-content: space-between;
+	}
+	.total-icon{
+		width: 60px;
+		height: 60px;
+		background: #fff;
+		border-radius: 8px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 15px;
+		border: 1px solid var(--border-color);
+		
+		@include respond("phone-land"){
+			margin-bottom: 0;
+		}
+		svg{
+			path{
+				fill: #CC0D39;
+			}
+		}
+	}
+	.total-detail{
+		.title{
+			font-weight: 500;
+			margin-bottom: 0;
+			@include transitionMedium;
+			
+			@include respond("phone-land"){
+				text-align: end;
+			}
+		}
+		.text{
+			@include transitionMedium;
+			font-size: 14px;
+		}
+	}
+	&:hover{
+		background-color: var(--primary);
+		.total-detail{
+			.title,
+			.text{
+				color: #fff;
+			}
+		}
+	}
+}
+
+.profile-edit .thumb{
+	position: relative;
+	.edit-img{
+		position:absolute;
+		bottom: 0;
+		right: 10%;
+		width: 35px;
+		height: 35px;
+		border: 1px solid #fff;
+		padding: 5px;
+		background-color: var(--primary);
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		i{
+			color: #fff;
+		}
+	}	
+}
+
+.avatar-upload .avatar-preview > div {
+   	display: block;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.thumb-edit {
+	label{
+		background: var(--primary);
+		width: 40px;
+		height: 40px;
+		color: #fff;
+		border-radius: 50%;
+		padding: 0;
+		position: absolute;
+		top: 0;
+		left: -12px;
+	}
+}
+
+.countries-card{
+	ul{
+		li{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 12px 0;
+			border-bottom: 1px solid var(--border-color);
+		}
+		.thumb-detail{
+			img{
+				width: 30px;
+			}
+			span{
+				font-weight: 500;
+				margin-left: 5px;
+				font-size: 15px;
+			}
+		}
+		.thumb-content{
+			.amount{
+				margin-bottom: 0;
+				font-size: 14px; 
+			}
+		}
+	}
+}
+
+.card .card-body.sales-chart-wraper{
+	@include respond("phone"){
+		padding:0px 15px ;
+	}
+}
+
+.sales-chart-wraper{
+    background-color: #fff;
+    padding: 0 15px;
+    box-shadow: 0px 36px 48px rgba(31, 66, 135, 0.04);
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.account-card{
+	.table-responsive.download-table{
+		.table{
+			thead{
+				tr{
+					th{
+						@include respond("phone-land"){
+							padding: 0 10px 20px;;
+						}
+					}
+				}
+			}
+			@include respond("phone-land"){
+				tbody > tr {
+					.product-item-img{
+						img{
+							min-width: 60px;
+							height: 60px;
+						}
+					}
+					.product-item-name{
+						font-size: 13px;
+					}
+					td .btn-md{
+						padding: 8px 14px;
+						font-size: 12px;
+					}
+				}
+			}	
+		}
+	}
+}
+
+.account-sidebar-wrapper{
+	z-index: 99;
+	margin-top: -170px;
+	
+	@include respond("tab-land"){
+		margin: 0;
+		z-index: 99999;
+	}
+}

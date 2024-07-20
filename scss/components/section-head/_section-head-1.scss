@@ -1,0 +1,87 @@
+// Section Head
+.section-head{
+	&.style-1{
+		.title{
+		    font-size: 35px;
+			font-weight: 600;
+			text-transform: capitalize;
+
+			@include respond('tab-port'){
+				font-size: 28px;
+			}
+		}
+		p{
+			font-size: 18px;
+			color: rgba(0, 0, 0, 0.7);
+			font-weight: 500;
+		}
+		a{
+			text-transform: capitalize;
+			white-space: nowrap;
+			font-size: 500;
+		}
+		@include respond('phone-land'){
+			p{
+				font-size: 16px;
+			}
+		}
+		@include respond('phone'){
+			.title{
+				font-size: 20px;
+				margin-bottom: 6px;
+			}
+		}
+	}	
+	&.style-2{
+		.title{
+		    font-size: 40px;
+			font-weight: 600;
+			text-transform: capitalize;
+
+			@include respond('tab-land'){
+				font-size: 32px;
+			}
+		}
+		p{
+			font-size: 16px;
+			color: var(--title);
+			font-weight: 300;
+		}
+		a{
+			text-transform: capitalize;
+			font-weight: 500;
+		}
+		@include respond('phone'){
+			.title{
+				font-size: 20px;
+				margin-bottom: 6px;
+			}
+		}
+		a{
+			white-space: nowrap;
+		}
+	}
+	
+	&.style-3{
+		.title{
+			font-size: 28px;
+		}
+		p{
+			font-size: 16px;
+			color: var(--title);
+			font-weight: 300;
+		}
+		a{
+			text-transform: capitalize;
+		}
+		@include respond('phone'){
+			.title{
+				font-size: 20px;
+				margin-bottom: 6px;
+			}
+		}
+		a{
+			white-space: nowrap;
+		}
+	}
+}

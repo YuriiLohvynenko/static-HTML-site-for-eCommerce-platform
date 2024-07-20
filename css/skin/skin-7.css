@@ -1,0 +1,43 @@
+:root{
+	
+	/* Primary */
+	--primary: #44bf70;
+	--primary-hover: #34af60;
+	--primary-dark: #12853a;
+	
+	--secondary: #5187bf;
+	--secondary-hover: #3d74ad;
+    --secondary-light: #b0d7ff;
+	--title: #222222;
+	--bg-light: #e8fff0;
+	--theme-text-color: #fff;
+	--dark: #062336;
+    --dark-light: #41708f;
+	
+	/* Primary RGBA */
+	--rgba-primary-1: rgba(68, 191, 112, 0.1);
+	--rgba-primary-2: rgba(68, 191, 112, 0.2);
+	--rgba-primary-3: rgba(68, 191, 112, 0.3);
+	--rgba-primary-4: rgba(68, 191, 112, 0.4);
+	--rgba-primary-5: rgba(68, 191, 112, 0.5);
+	--rgba-primary-6: rgba(68, 191, 112, 0.6);
+	--rgba-primary-7: rgba(68, 191, 112, 0.7);
+	--rgba-primary-8: rgba(68, 191, 112, 0.8);
+	--rgba-primary-9: rgba(68, 191, 112, 0.9);
+	
+	/* Secondary RGBA */
+	--rgba-secondary-1: rgba(46, 100, 199, 0.1);
+	--rgba-secondary-2: rgba(46, 100, 199, 0.2);
+	--rgba-secondary-3: rgba(46, 100, 199, 0.3);
+	--rgba-secondary-4: rgba(46, 100, 199, 0.4);
+	--rgba-secondary-5: rgba(46, 100, 199, 0.5);
+	--rgba-secondary-6: rgba(46, 100, 199, 0.6);
+	--rgba-secondary-7: rgba(46, 100, 199, 0.7);
+	--rgba-secondary-8: rgba(46, 100, 199, 0.8);
+	--rgba-secondary-9: rgba(46, 100, 199, 0.9);
+	
+	/* Gradient */
+	--gradient1: linear-gradient(180deg, #FFFFFF 26.76%, rgb(198 218 255) 109.73%);
+    --gradient2: linear-gradient(180deg, rgba(255, 193, 180, 0) 0%, rgba(68, 191, 112, 0.39) 100%);
+	
+}

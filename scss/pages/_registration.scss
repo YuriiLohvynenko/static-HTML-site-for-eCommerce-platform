@@ -1,0 +1,264 @@
+.registration-media{
+	text-align: $dz-pos-right;
+	position: relative;
+	z-index: -1;
+	margin: auto;
+	margin-top: -90px;
+	
+	@media (min-width: 1921px){
+		text-align: center;		
+	}
+	
+	@include respond('laptop'){
+		margin-top:0;
+	}
+	
+	@include custommq($max:991px, $min:300px){
+		position: absolute;
+		margin-top: 0px;
+		#{$dz-pos-right}: 10%;
+		bottom: 0;
+	}
+
+	@include respond('phone'){
+		#{$dz-pos-right}: 5%;
+	}
+	
+	img{
+		@include respond('laptop'){
+			height: 600px;
+			width: 100%;
+			object-fit: contain;
+			object-position: bottom;
+		}
+		@include respond('tab-port'){
+			height: auto;
+		}
+		@include custommq($max:991px, $min:300px){
+			height: 280px;
+			object-fit: contain;
+		}
+		@include respond('phone-land'){
+			height:240px;
+		}
+	}
+}
+.start-side-content{
+	padding:120px 80px 0 80px;
+	position:relative;
+	background:#FFEDD4;
+	z-index: 1;
+	&:after{
+		content: "";
+		position: absolute;
+		bottom: 0px;
+		#{$dz-pos-left}: 16%;
+		width: 51%;
+		height:60%;
+		background: rgb(255, 255, 255);
+		border-radius: 50% 50% 0px 0px;
+		z-index: -2;
+	}
+	@include custommq($max:991px, $min:300px){
+		padding:120px 80px 80px 80px;
+		height: 400px;
+		display: flex;
+		align-items: center;
+		&:after{
+			#{$dz-pos-left}: auto;
+			width: 200px;
+			height: 250px;
+			#{$dz-pos-right}: 12%;
+		}
+	}
+	@include respond('tab-land'){
+	    padding: 120px 20px 0px;
+	}
+	@include respond('tab-port'){
+	    padding: 120px 15px 0px;
+	}
+	@include respond('phone-land'){
+		padding:120px 30px 80px 30px;
+		height:330px;
+		.dz-bnr-inr-entry{
+			h1{
+				font-size:26px;
+				line-height: 1.1;
+			}
+		}
+		&:after{
+			width: 160px;
+			height: 218px;
+			#{$dz-pos-right}: 4%;
+		}
+	}
+	@include respond('phone'){
+		padding:120px 15px 80px 15px;
+	}
+}
+.end-side-content{
+	padding: 120px 80px 80px 80px;
+	display: flex;
+	flex-direction: column;
+	@include custommq($max:1024px, $min:300px){
+		padding:80px;
+	}
+	@include respond('phone-land'){
+		padding:60px;
+	}
+	@include respond('phone'){
+		padding:30px 15px 30px;
+	}
+}
+
+.login-area{
+    padding: 80px;	
+	max-width:522px;
+	margin:auto;
+	border-radius: 30px;
+	border: 1px solid var(--secondary);
+	width: 100%;
+	@include respond('tab-land'){
+		padding: 30px;	
+	}
+	@include respond('phone'){
+		padding: 15px;
+	}
+	form{
+		.label-title{
+			margin-bottom:5px;
+			font-weight: 500;
+			font-family:var(--font-family-title);
+			font-size: 16px;
+		}
+	}
+	.secure-input {
+		position: relative;
+		z-index: 1;
+		.show-pass{
+			cursor: pointer;
+			position: absolute;
+			right: 0;
+			height: auto;
+			width: 40px;
+			top: 50%;
+			transform: translate(-20%, -50%);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 18px;
+			i{
+				color:#000;
+			}
+			&:after{
+				content: "";
+				height: 2px;
+				width: 24px;
+				background-color: #000;
+				position: absolute;
+				border-radius: 5px;
+				transform: rotate(15deg);
+				opacity: 1;
+			}
+
+			&.active{
+				&:after{
+					opacity:0;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+// ========= ACCOUNT-ORDERS-DETAILS ============
+
+.order-details-content{
+	li{
+		strong{
+			color: #000;
+		}
+	}
+}
+
+.order-details-billing,
+.order-details-address{
+	border: 1px solid #000;
+    padding: 20px;
+	height: 100%;
+}
+.order-details-billing{
+	@include respond("phone"){
+		margin-bottom: 30px;
+	}
+}
+
+.order-details-content{
+	display: flex;
+	flex-wrap: wrap;
+	li{
+		display: grid;
+		width: 33%;
+		margin-bottom: 15px;
+
+		@include respond("phone"){
+			width: 100%;
+		}
+	}
+
+}
+.ecommerce-order{
+	.check-tbl{
+		border: 1px solid #000;
+		border-radius:5px;
+		thead{
+			th{
+				padding: 15px;
+				border-right: 1px solid #000;			
+			}
+		}
+		tbody{
+			tr{
+				border-bottom: 1px solid #000;
+				td.product-item-name{
+					padding: 15px !important;
+					
+				}
+				td{
+					&:first-child{
+						padding: 15px !important;
+					}
+					&:last-child{
+						padding: 15px !important;
+					}
+
+					&.product-item-price{
+						border-left: 1px solid #000;
+					}
+				}
+			}
+		}
+		
+	}
+}
+
+// ======== ACCOUNT-ADDRESS ========= //
+.account-ticket{
+	.custom-control{
+		&.style-1{
+			.custom-checkbox{
+				justify-content: space-between;
+				.title{
+					color: #686868;
+					font-size: 14px;
+				}
+				.text{
+					color: #000;
+					font-weight: 600;
+				}
+			}
+		}
+	}
+}

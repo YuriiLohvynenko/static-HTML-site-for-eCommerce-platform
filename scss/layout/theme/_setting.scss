@@ -1,0 +1,393 @@
+#bg {
+    background-attachment: fixed;
+    background-size: cover;
+}
+.main-bar-wraper.sticky-no{
+	.main-bar {
+		position: unset;
+	}
+}
+.boxed{
+	.page-wraper{
+		max-width: 1200px;
+		margin: 0 auto;
+		position: relative;
+		overflow: hidden;
+		background: #fff;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+	}
+	.footer-fixed .site-footer {
+		#{$dz-pos-left}: 50%;
+		width: 1200px;
+		margin: 0 -600px;
+		
+	}
+	.is-fixed{
+		.main-bar {
+			transition: none;
+			-moz-transition: none;
+			-ms-transition: none;
+			-webkit-transition: none;
+			-o-transition: none;
+			position: unset;
+		}
+	}
+	
+	// site-header
+	.site-header{
+		&.style-1{
+			.extra-cell{
+				& > a, 
+				& > div{
+					margin-#{$dz-pos-left}: 15px;
+				}
+			}
+			.extra-icon-box{
+				@include respond('wide-desktop-min'){
+					display:none;
+				}
+			}
+		}
+		&.style-2{
+			.extra-cell{
+				.login-btn{
+					i{
+						@include respond('wide-desktop-min'){	
+							margin:0;
+						}
+					}
+					@include respond('wide-desktop-min'){		
+						margin-#{$dz-pos-left}: 20px;
+						width: 45px;
+						height: 45px;
+						padding: 12px;
+						span{
+							display:none;
+						}
+					}
+				}
+			}
+			.social-list.style-2 {
+				@include respond('wide-desktop-min'){
+					display: none;
+				}
+			}
+			
+			&.center{
+				.header-nav{
+					.nav{
+						&.navbar-left {
+							margin-#{$dz-pos-right}: 120px;
+						}
+						&.navbar-right {
+							margin-#{$dz-pos-left}: 120px;
+						}
+					}
+				}
+				.extra-icon-box{
+					padding-#{$dz-pos-left}: 0;
+					width: 50px;
+					.title,
+					span{
+						display: none;
+					}
+				}
+				.extra-nav-left,
+				.extra-nav{
+					width: 120px;
+					padding: 0;
+				}				
+				.extra-cell{
+					.login-btn{
+						display: none;
+					}
+					& > a,
+					& > div {
+						margin-#{$dz-pos-left}: 15px;
+					}
+				}
+			}
+		}
+	}
+	.header-nav {
+		.nav{
+			&>li {
+				&>a {
+					@include respond('wide-desktop-min'){
+						padding-#{$dz-pos-left}:15px;
+						padding-#{$dz-pos-right}:15px;
+					}
+				}
+			}
+		}
+	}
+	@include respond('desktop'){
+		.banner-four .shape-bg{
+			width:30vw;
+		}
+	}
+	.silder-one{
+		.silder-content{
+			@include respond('wide-desktop-min'){
+				padding: 40px;
+			}
+			.title{
+				@include respond('wide-desktop-min'){
+					margin-bottom: 20px;
+					font-size: 60px;
+				}
+			}
+			.sub-title{
+				@include respond('wide-desktop-min'){
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+	
+	//silder-two
+	.silder-two{
+		@include respond('desktop'){
+			.title{
+				font-size:45px;
+			}
+			.silder-content{
+				width:60%;
+				padding-#{$dz-pos-right}: 80px;
+				padding-#{$dz-pos-left}: 40px;
+			}
+			.silder-img{
+				width: calc(40% + 55px);
+			}
+		}
+	}
+	
+	.container-fluid{
+		@include respond('wide-desktop-min'){
+			padding-#{$dz-pos-left}:15px;
+			padding-#{$dz-pos-right}:15px;
+		}
+	}
+	.under-construct{
+		@include respond('wide-desktop-min'){
+			padding:50px;
+		}
+		.dz-content{
+			.dz-title{
+				font-size: 60px;
+				
+				@include respond('wide-desktop-min'){
+					font-size: 60px;
+				}
+			}
+			p{
+				@include respond('wide-desktop-min'){
+					font-size: 28px;
+				}
+			}
+		}
+	}
+	
+	.download-area .download-media.right {
+		#{$dz-pos-right}: 78%;
+	}
+	
+	.newsletter-bx {
+		padding: 40px;
+	}
+	.portfolio-area2 .setResizeMargin {
+		padding-#{$dz-pos-right}: 15px;
+		margin-#{$dz-pos-left}: 0!important;
+		padding-#{$dz-pos-left}: 15px;
+	}
+	
+	.sidenav-menu{
+		position: absolute;
+	}
+	.dz-coming-soon{
+		.dz-title{
+			font-size: 42px;
+			@include respond ('phone'){
+				font-size: 28px;
+			}
+		}
+		.countdown{
+			.date{
+				span {
+					font-size: 14px;
+				}
+				.time {
+					font-size: 60px;
+					line-height: 60px;
+					@include respond ('phone'){
+						font-size: 35px;
+					}
+				}
+			}
+		}
+		.dz-coming-bx {
+			padding-#{$dz-pos-left}: 30px;
+			padding-#{$dz-pos-right}: 30px;
+			@include respond ('phone'){
+				padding-#{$dz-pos-left}: 12px;
+				padding-#{$dz-pos-right}: 12px;
+			}
+		}
+	}
+	.swiper-btn-center-lr{
+		position:relative;
+		.btn-next,
+		.btn-prev{
+			position:absolute;
+			top:50%;
+			transform:translateY(-50%);
+		}
+		.btn-prev{
+			#{$dz-pos-left}:0px;
+		}
+		.btn-next{
+			#{$dz-pos-right}:0px;
+		}
+		&:hover{
+			.btn-prev{
+				#{$dz-pos-left}:0px;
+			}
+			.btn-next{
+				#{$dz-pos-right}:0px;
+			}
+		}
+	}
+}
+
+/* Frame */
+.frame{
+	padding:30px;
+	.page-wraper{
+		margin: 0 auto;
+		position: relative;
+		overflow: hidden;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		overflow-y: scroll;
+		height: auto!important;
+	}
+	
+	// site-header
+	.site-header{
+		&.style-1{
+			.extra-icon-box{
+				@include respond('wide-desktop'){
+					display:none;
+				}
+			}
+		}
+	}
+	
+	.is-fixed{
+		.main-bar {
+			#{$dz-pos-left}:0;
+			width: 100%;
+			margin: 0;
+			position: unset;
+		}
+	}
+	button.scroltop{
+		#{$dz-pos-right}:50px;
+		bottom:50px;
+	}
+	.sidenav-menu{
+		position: absolute;
+	}
+	@include respond('wide-desktop'){
+		.dz-coming-bx{
+			padding-#{$dz-pos-left}: 30px;
+			padding-#{$dz-pos-right}: 30px;
+		}
+		.countdown .date .time{
+			font-size: 70px;
+			line-height: 70px;
+		}
+	}
+}
+@media only screen and (max-width: 1024px) {
+	.frame {
+		padding:0;
+	}
+	.frame button.scroltop{
+		#{$dz-pos-right}:15px;
+		bottom:15px;
+	}
+
+}
+
+.theme-sharped{
+	--border-radius-base: 0;
+	@include transitionNone;
+	
+	
+	.banner-one .banner-media .shape-1, .banner-one .banner-media .shape-2,
+	.dz-card .dz-meta li.post-date,
+	.progress-bx.style-2 .progress,
+	.progress-bx.style-2 .progress .progress-bar{
+		border-radius:0;
+	}
+	
+}
+.theme-rounded{
+	--border-radius-base: 6px;
+	@include transitionNone;
+}
+
+
+// Code Area
+.codearea{
+	background:#fff;
+	
+}
+.codezone{
+	hr{
+		margin:60px 0;
+	}
+}
+.dz-codebox{
+	border:1px solid #F3F3F3;
+	border-radius: 6px;
+	.container{
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	.site-header .main-bar{
+		border-radius:8px;
+	}
+	.dz-code-header{
+		padding:15px 30px;
+		border-bottom:1px solid #F3F3F3;
+		h4{
+			margin-bottom:0;
+		}
+		p{
+			font-size:13px;
+			margin-bottom:0;
+		}
+	}
+	
+	.dz-element{
+		padding:30px;
+		background:#dfdede;
+		border-bottom: 1px solid #c9c9c9;
+		position: relative;	
+	}
+	
+	.dz-code{
+		border-top:1px solid #F3F3F3;
+		
+	}
+	.code-box{
+	    font-size: 13px;
+		height: 200px;
+	    margin: 0;
+	    resize: both;
+	}
+	.header-nav .nav > li.has-mega-menu.auto-width .mega-menu > ul > li {
+		width: 150px;
+	}
+}

@@ -1,0 +1,364 @@
+
+/* Added By Yurii 07/12/2024 */
+* {
+    font-family: 'Poppins';
+}
+.bg-dark-blue {
+    background-color: #344454 !important;
+  }
+.text-dark-blue {
+    color: #344454 !important;
+}
+.text-light-blue {
+    color: #6E7D8D !important;
+}
+.text-light-green {
+    color: #6CBCB9 !important;
+}
+.text-light-grey {
+    color: #8A96A2 !important
+}
+.bg-light-green {
+    background-color: #EDF6F6 !important;
+}
+.btn-dark-blue {
+    background-color: #344454 !important;
+    color: #ffffff !important;
+}
+.btn-border-dark-blue {
+    border: 1px solid #435669 !important;
+    color: #435669 !important;
+}
+.btn-border-dark-blue:active, .btn-border-dark-blue:hover  {
+    background: #aabbcb;
+}
+.btn-dark-blue:active, .btn-dark-blue:hover {
+    background-color: #435669 !important;
+}
+.btn-light-green {
+    background-color: #8AD2CF !important;
+    color: #344454 !important;
+}
+.btn-light-green:active, .btn-light-green:hover {
+    background-color: #97ebe8 !important;
+}
+.border-dark-blue {
+    border-color: #344454 !important;
+} 
+.right-bar {
+    border-right: 1px dashed #344454;
+}
+/* Style for font Size */
+.fs-small {
+    font-size: small !important;
+}
+.fs-large {
+    font-size: large !important;
+}
+.fs-larger {
+    font-size: larger !important;
+}
+.radius-10 {
+    border-radius: 10px !important;
+}
+
+
+/*  */
+.header-nav.w3menu .nav > li.sub-menu-down > a:after {
+    content: none;
+}
+.header-nav.w3menu .nav > li.has-mega-menu a {
+    border-bottom: 2px solid transparent !important;
+}
+.header-nav.w3menu .nav > li.has-mega-menu a:hover {
+    color: #6CBCB9 !important;
+    border-bottom: 2px solid #6CBCB9 !important;
+}
+.header-bar .nav-link:hover {
+    color: #6CBCB9 !important;
+}
+.main-nav {
+    transition: .2s;
+}
+.main-nav a {
+    border-bottom: 2px solid transparent !important;
+}
+.main-nav a:hover {
+    color: #6CBCB9 !important;
+    border-bottom: 2px solid #6CBCB9 !important;
+}
+
+
+@media only screen and (max-width: 767px) {
+    .site-header .extra-nav {
+        float: right;
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 9;
+        height: 80px;
+        padding-left: 30px;
+        color: var(--title);
+        width: auto;
+        background: transparent;
+        bottom: auto;
+        left: auto;
+        padding: 0;
+        box-shadow: none;
+        height: auto;
+        transition: all 0.5s ease 0.5s;
+    }
+}
+
+.shop-card .dz-content {
+    display: block;
+}
+
+/* Style for Swipper */
+.swiper-banner .bg-left-banner {
+    background-image: url('../images/banner/pic3.png');
+    background-color: #8AD2CF;
+}
+.swiper-banner .banner-text {
+    font-size: 45px;
+    line-height: 1.5;
+}
+@media screen and (max-width: 1200px) {
+    .swiper-banner .banner-text {
+        font-size: 38px;
+        line-height: 1.4;
+    }
+}
+@media screen and (max-width: 917px) {
+    .swiper-banner .banner-text {
+        font-size: 40px;
+        line-height: 1.4;
+    }
+}
+@media screen and (max-width: 767px) {
+    .swiper-banner .banner-text {
+        font-size: 30px;
+        line-height: 1.4;
+    }
+}
+
+@media screen and (max-width: 567px) {
+    .swiper-banner .banner-text {
+        font-size: 25px;
+        line-height: 1.2;
+    }
+}
+
+
+/* Style for Gift Section */
+
+.gift-section .gift-card {
+    background-color: #EDF6F6 !important;
+}
+
+.gift-section .review-panel {
+    background: #D5E4F3 !important;
+}
+.gift-section {
+    i {
+        font-size: 2rem !important;
+    }
+}
+/* Style for Gift Section End */
+
+/* Style For All Gift Section */
+.site-filters.style-1 li.active  {
+    background: #6CBCB9 !important;
+    border: 1px solid transparent !important;
+    color: #344454;
+}
+.site-filters .filters {
+    white-space: nowrap;
+    overflow: auto;
+}
+.site-filters.style-1 li {
+    border: 1px solid #344454 !important;
+}
+.all-gift-section .filter-wrapper .filter-right-area >div {
+    border-left: none;
+}
+.all-gift-section .filter-wrapper .filter-right-area .form-group .btn {
+    border-radius: 4px;
+    background-color: #F3F5F7;
+}
+@media (max-width: 768px) {
+    .all-gift-section .filter-wrapper .filter-right-area,
+    .all-gift-section .filter-wrapper .filter-right-area .form-group,
+    .all-gift-section .filter-wrapper .filter-right-area .form-group .dropdown,
+    .all-gift-section .filter-wrapper .filter-right-area .form-group .dropdown .btn
+     {
+        width: 100% !important;
+    }
+}
+
+.gift-swiper-control {
+}
+@media (max-width: 768px) {
+    .gift-swiper-control {
+        
+    }       
+}
+
+@media (min-width: 1200px) {
+    .all-gift-section .col-xl-2 {
+        flex: 0 0 auto;
+        width: 20%;
+    }
+}
+@media (min-width: 992px) {
+    .all-gift-section .col-lg-2 {
+        flex: 0 0 auto;
+        width: 20%;
+    }
+}
+
+.pagination.style-1 li .page-link {
+    border: 1px solid #DCE0E4;
+    border-radius: 8px;
+    padding: 6px 4px;
+    min-width: 36px;
+    height: 36px;
+    background-color: transparent;
+}
+.pagination.style-1 li .page-link.active {
+    background-color: #8AD2CF;
+    border: 1px solid transparent;
+}
+.pagination.style-1 li .page-link.next {
+    background-color: #344454;
+    color: white;
+}
+.pagination.style-1 li .page-link.next i {
+    font-size: 20px;
+}
+/* Style For All Gift Section End */
+
+
+/* Easy Step Section Style */
+.bg-curve-fill  {
+    background-image: url(../images/steps/back.png);
+    background-size: cover;
+}
+
+.bg-curve-lg-fill  {
+    background-image: url(../images/products/back.png);
+    background-size: cover;
+}
+
+.shop-card .product-tag .badge.badge-orange {
+    background-color: #FF613B;
+    color: #ffffff;
+}
+.badge-orange {
+    background-color: #FF613B;
+}
+.shop-card .product-tag .badge.badge-green {
+    background-color: #398934;
+    color: #ffffff;
+}
+.badge-green {
+    background-color: #398934;
+}
+/* Easy Step Section Style End */
+
+/* Style For Product Page */
+.product-page .dz-product-detail.style-2 {
+    max-width: none;
+} 
+
+/* Style For Cart Page */
+/* Quantity Control */
+.cart-page .btn-quantity input {
+    width: 24px !important;
+    height: 24px !important;
+    font-size: small !important;
+    background-color: transparent !important;
+    border: none !important;
+}
+.cart-page .btn-quantity .input-group-btn-vertical .btn {
+    width: 24px !important;
+    height: 24px !important;
+    font-size: small !important;
+    min-width: auto !important;
+}
+.cart-page .btn-quantity .bootstrap-touchspin {
+    width: 100px;
+    height: 32px;
+    min-width: auto;
+    padding: 5px !important;
+    border-radius: 20px;
+    background-color: #F3F5F7;
+}
+.cart-page .btn-quantity .input-group-btn-vertical {
+    padding: 5px;
+}
+.cart-page .btn-quantity .input-group-btn-vertical .btn {
+    background-color: #344454 !important;
+}
+.cart-page .btn-quantity .input-group-btn-vertical .btn:disabled {
+    background-color: #C4CED8 !important;
+}
+.cart-page .btn.btn-select-size.active {
+    background-color: #FF613B !important;
+    color: white !important;
+}
+.cart-page .btn.btn-select-size {
+    background-color: #F3F5F7 !important;
+    color: #344454 !important;
+}
+
+/* Page CheckOut */
+.bg-custom-main {
+    background-color: #F3F5F7;
+}
+
+.page-checkout {
+    background-color: #F3F5F7;
+}
+
+.page-checkout .form-control {
+    background-color: #F3F5F7 !important;
+    color: #808D9A;
+}
+.page-checkout .form-control::placeholder {
+    color: #808D9A;
+}
+
+.page-checkout .custom-checkbox-group input[type='checkbox'] {
+    left: 25px;
+    margin: 0;
+}
+
+.page-checkout .custom-checkbox-group input[type='checkbox']:checked {
+    border-radius: 2px !important;
+    background-color: #6C8CB9;
+    border: none;
+}
+
+.page-checkout .custom-checkbox-group input[type='checkbox']:checked+label {
+    border: 1px solid #6CBCB9 !important;
+    background-color: #ECFFFF;
+}
+.page-checkout .custom-checkbox-group input[type='checkbox']:checked+label .description{
+    display: block !important;
+}
+
+.page-checkout .custom-checkbox-group label {
+    padding-left: 45px !important;
+}
+
+
+@media (max-width: 767px) {
+    .page-checkout .payment-method-section .custom-checkbox-group input[type='checkbox'] {
+        top: 36px !important;
+    }
+    .page-checkout .payment-method-section .custom-checkbox-group input[type='checkbox'] +label {
+        padding-left: 16px !important;
+        padding-top: 60px !important;
+    }
+}

@@ -1,0 +1,203 @@
+.about-style4{
+	background-color: #FFEDD4;
+    position: relative;
+    z-index: 1;
+	padding-top: 75px;
+	@include respond ('phone-land'){
+		padding-top: 40px;
+	}
+	.section-head{
+		margin-bottom: 20px;
+		.title{
+			font-size: 45px;
+			font-weight: 600;
+			text-transform: capitalize ;
+		}
+	}
+	@include respond ('tab-land'){
+		.section-head{
+			margin-bottom: 12px;
+			.title{
+				font-size: 32px;
+			}
+		}
+	}
+	@include respond ('phone'){
+		.section-head{
+			margin-bottom: 6px;
+			.title{
+				font-size: 30px;
+			}
+		}
+	}
+	.about-content{
+		border-radius: 30px;
+		background: #FFF;
+		box-shadow: 0px 15px 50px 0px rgba(94, 141, 118, 0.10);
+		padding: 40px;
+		.para-text{
+			color: var(--secondary);
+			margin-bottom: 30px;
+			font-size: 18px;
+			font-weight: 400;
+		}
+		@include respond ('tab-land'){
+			padding: 25px;
+			.para-text{
+				margin-bottom: 20px;
+				font-size: 16px;
+			}
+		}
+		@include respond ('phone'){
+			.para-text{
+				line-height: 25px;
+			}
+		}
+	}
+	.side-content {
+		z-index: 1;
+		background: transparent;
+		position: relative;
+		padding-right:120px;
+		@include respond ('tab-land'){
+			padding-right:0px;	
+		}
+		.about-thumb {
+			text-align: right;
+			position: relative;
+			z-index: 0;
+			margin: auto;
+			margin-top: -100px;
+			@include respond ('tab-port'){
+				margin-top: 0;
+			}
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: 0px;
+			left: -14%;
+			width: 68%;
+			height: 68%;
+			background: linear-gradient(90deg, #FFFAF3 1.69%, rgba(255, 250, 243, 0.00) 103.98%);
+			border-radius: 50% 50% 0px 0px;
+			z-index: -2;
+		}
+	}
+	img.line {
+		position: absolute;
+		top: 0;
+		left: 0%;
+		width: 50%;
+		height: 100%;
+		@include respond ('tab-port'){
+			display: none;
+		}
+    }
+	.our-customer{
+		position: absolute;
+		bottom: 140px;
+		right: 90px;
+		width: 180px;
+		padding: 18px 20px;
+		border-radius: 10px;
+		background-color: #ffff;
+		box-shadow: 0px 15px 40px 0px rgba(0, 0, 0, 0.1);
+		@include respond('tab-land'){	
+			bottom: 80px;
+			#{$dz-pos-right}: 80px;	
+		}
+		@include custommq($max:1199px, $min:991px){	
+			bottom: -20px;
+			#{$dz-pos-right}: 80px;	
+		}
+		@include respond('phone-land'){	
+			bottom: -10px;
+			#{$dz-pos-left}: 50%;	
+			#{$dz-pos-right}: auto;	
+			transform: translateX($dz-tx);
+		}			
+		ul{
+			display: flex;
+			padding: 0 10px;
+		}
+		.total-customer{
+			background-color: var(--light);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: var(--title);
+		}
+		.total-customer,
+		.customer-image{
+			width: 50px;
+			min-width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			margin-#{$dz-pos-left}: -10px;
+			img{
+				border: 2px solid $white;
+				border-radius: 50%;
+			}
+		}
+	}
+	.about-bx-detail{
+		display: flex;
+		align-items: center;
+		.about-bx-pic{
+			width: 80px;
+			height: 80px;
+			border-radius: 50%;
+			overflow: hidden;
+			margin-#{$dz-pos-right}: 15px;
+			border: 2px solid #fff;
+			@include respond ('tab-land'){
+				margin-#{$dz-pos-right}: 10px;
+			}
+			img{
+				border-radius: 100%;
+				width: 100%;
+				height: 100%;
+				
+			}
+		}
+		.name{
+			font-size: 22px;
+			color: var(--title);
+			margin-bottom: 0;
+			@include respond ('tab-land'){
+				font-size: 18px;
+			}
+		}
+		.position{
+			font-size: 14px;
+			@include respond ('tab-land'){
+				font-size: 12px;
+			}
+		}
+		@include respond ('phone'){
+			.about-bx-pic{
+				width: 50px;
+				height: 50px;
+				margin-#{$dz-pos-right}: 10px;
+			}
+			.name{
+				font-size: 14px;
+			}
+			.position{
+				font-size: 10px;
+			}
+		}
+	}
+	@include respond ('phone'){
+		.about-thumb{
+			width: 325px;
+			margin-#{$dz-pos-left}: auto;
+			margin-#{$dz-pos-right}: auto;
+			&:after{
+				width: 325px;
+				height: 325px;
+			}
+		}
+	}
+}

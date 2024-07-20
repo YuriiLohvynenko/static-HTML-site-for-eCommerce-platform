@@ -1,0 +1,75 @@
+/*
+    =========================
+	Template Name 	 : Pixio
+	Author			 : DexignZone
+	Version			 : 1.4
+	Author Portfolio : https://themeforest.net/user/dexignzone
+	=========================
+	
+	[Table of Contents] 
+
+	=== SCSS Start ===
+	
+    1. Abstract
+		1.1 abstract.scss
+		1.2 bs_custom.scss
+		1.3 mixins.scss
+		1.4 variable.scss
+		
+    2. Base
+		2.1 base.scss
+		2.2 custom-grid.scss
+		2.3 fonts.scss
+		2.4 preloader.scss
+		2.5 reset.scss
+		2.6 shortcode.scss
+		
+    3. Components
+		3.1 About
+		3.2 Blog Post
+		3.3 Iconbox
+		3.4 Portfolio
+		3.5 Pricing
+		3.6 Section Head
+		3.7 Shop
+		3.8 Team
+		3.9 Testimonials
+		3.10 Other scss File
+		
+    4. Layout
+		4.1 Banner
+		4.2 Footer
+		4.3 Header
+		4.4 Theme
+		4.5 Other scss File
+		
+    5. Pages
+		5.1 Blog Details.scss
+		5.2 Comingsoon.scss
+		5.3 Compare.scss
+		5.4 Contact-us.scss
+		5.5 Error-page.scss
+		5.6 Faq.scss
+		5.7 Gift-bx.scss
+		5.8 Index.scss
+		5.9 Index-2.scss
+		5.10 Index-3.scss
+		5.11 Index-4.scss
+		5.12 Registration.scss
+		5.13 Shop.scss
+		5.14 Shop-cart.scss
+		5.15 Shop-checkout.scss
+		5.16 Shop-wishlist.scss
+		5.17 Under-construct.scss
+		5.18 What-we-do.scss
+		5.19 Woocommerce.scss
+
+	=== SCSS Start ===
+*/
+
+@import "./abstract/abstract";
+@import "./../vendor/bootstrap/scss/bootstrap.scss";
+@import "./base/base";
+@import "./components/components";
+@import "./pages/pages";
+@import "./layout/layout";

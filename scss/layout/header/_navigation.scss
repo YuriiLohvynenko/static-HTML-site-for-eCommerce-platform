@@ -1,0 +1,73 @@
+
+
+
+
+
+// Extra CSS
+.adv-media{
+	padding-#{$dz-pos-left}: 20px;
+	img{
+		width:100%;
+		border-radius: 20px;
+	}
+}
+.month-deal{
+	border:1px solid #eee;
+	padding:15px;
+	display: flex !important;
+	align-items: center;
+	margin-top: 25px;
+	min-width: calc(var(--list-width)* 3) !important;
+    max-width: 100%;
+	
+	@include respond('tab-port'){
+		margin-top: 20px;
+	}
+	@include respond('phone'){
+		flex-direction: column;
+		gap: 20px;
+		text-align: center;
+	}
+	p{
+		font-size:13px;
+		color:$body-color;
+		
+	}
+	.sale-countdown{
+		.countdown {
+			display: flex;
+			margin: 0;
+		}
+		.date {
+			margin: 0 5px;
+		    padding: 0;
+			.time{
+				font-size: 22px;
+				background: #eee;
+				width: 50px;
+				height: 50px;
+				line-height: 50px;
+				border-radius: 3px;
+				margin-bottom: 4px;
+				margin-#{$dz-pos-left}: auto;
+				margin-#{$dz-pos-right}: auto;
+				display: block;
+				color: var(--title) !important;
+				font-weight: 500;
+				font-family: var(--font-family-title);
+			}
+			.work-time{
+				font-size: 12px;
+				letter-spacing: 0;
+				color: var(--title);
+				font-weight: 400;
+				text-transform: uppercase;
+				font-family: var(--font-family-title);
+			}
+		}
+	}
+}
+
+a{
+	color:var(--title);
+}
